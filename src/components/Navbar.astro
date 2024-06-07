@@ -1,0 +1,167 @@
+---
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+---
+
+<div class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="logo">Your Logo</a>
+    <div class="menu-icon" id="menu-icon">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </div>
+    <div class="menu-items" id="menu-items">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <button class="dropdown-toggle">
+            <span>Services</span>
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li class="submenu">
+              <button class="submenu-toggle">Submenu</button>
+              <ul class="submenu-items">
+                <li><a href="#">Sub Menu 1</a></li>
+                <li><a href="#">Sub Menu 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+ .navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: background-color 0.4s;
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .menu-items ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-items ul li {
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  .menu-items ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+
+  .dropdown .dropdown-menu,
+  .submenu .submenu-items {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .submenu:hover .submenu-items {
+    display: block;
+  }
+
+  .dropdown .dropdown-menu li,
+  .submenu .submenu-items li {
+    width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+
+    .menu-items {
+      display: none;
+      flex-direction: column;
+    }
+
+    .menu-items.open {
+      display: flex;
+    }
+
+    .menu-items ul {
+      flex-direction: column;
+    }
+
+    .menu-items ul li {
+      margin: 0;
+    }
+
+    .dropdown .dropdown-menu,
+    .submenu .submenu-items {
+      position: relative;
+    }
+  }
+</style>
+
+<script>
+    function toggleDropdown(button) {
+      const dropdownMenu = button.nextElementSibling;
+      dropdownMenu.classList.toggle('open');
+    }
+  
+    function toggleSubmenu(button) {
+      const submenuItems = button.nextElementSibling;
+      submenuItems.classList.toggle('open');
+    }
+  
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuIcon = document.getElementById('menu-icon');
+      const menuItems = document.getElementById('menu-items');
+  
+      menuIcon.addEventListener('click', function () {
+        menuItems.classList.toggle('open');
+      });
+    });
+  </script>

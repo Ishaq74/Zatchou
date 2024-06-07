@@ -1,0 +1,17 @@
+{
+  "name": "recrutement-gagnant",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.9.2",
+    "astro-breadcrumbs": "^2.3.1",
+    "astro-navbar": "^2.3.2"
+  }
+}

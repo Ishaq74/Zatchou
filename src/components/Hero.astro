@@ -1,0 +1,147 @@
+---
+import HeroImage from '../assets/hero.jpg'
+
+export interface Props {
+    topper?: string;
+    title?: string;
+    text?: string;
+    buttonText?: string;
+    buttonLink?: string;
+    image?: string;
+    altimage?: string;
+}
+
+const { topper, title, text, buttonText, buttonLink, image, altimage }: Props = {
+    topper: 'Coaching personnalisé pour les entreprises et les candidats',
+    title: 'Test le Candidat Idéal avec Recrutement Gagnant',
+    text: 'Obtenez les résultats que vous méritez rapidement grâce à notre coaching personnalisé.',
+    buttonText: 'Réserver un appel',
+    buttonLink: 'https://zatchouli.fr',
+    image: HeroImage.src,
+    altimage: 'illustration du cabinet de coaching Recrutement Gagnant',
+};
+---
+
+<section id="hero-51">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{topper}</span>
+            <h2 class="cs-title">{title}</h2>
+            <p class="cs-text">{text}</p>
+            <a href={buttonLink} class="cs-button-solid">{buttonText}</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset={HeroImage.src}>
+        <source media="(min-width: 601px)" srcset={HeroImage.src}>
+        <img src={HeroImage.src} alt={altimage} width="1920" height="1280" aria-hidden="true">
+    </picture>
+</section>
+
+<style>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-51 {
+        padding: var(--sectionPadding);
+        padding-block: var(--spacing-xl);
+        position: relative;
+    }
+    #hero-51 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #hero-51 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #hero-51 .cs-title {
+        color: var(--bodyTextColorWhite);
+    }
+    #hero-51 .cs-text {
+        margin-bottom: 1rem;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+    }
+    #hero-51 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #hero-51 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #hero-51 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #hero-51 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #hero-51 .cs-picture {
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #hero-51 .cs-picture:before {
+        /* black color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #hero-51 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+</style>

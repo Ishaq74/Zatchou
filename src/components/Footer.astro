@@ -1,0 +1,224 @@
+---
+import { SITE_TITLE, SITE_DEV, SITE_DEV_URL, SITE_LOGO, SITE_LOGO_ALT, SOCIAL_MEDIA } from '../consts';
+---
+
+<footer id="footer-1147">
+    <div class="cs-container">
+        <div class="cs-top">
+            <a aria-label="retour à l'accueil" class="cs-logo" href="index.html">
+                <img class="cs-logo-img" loading="lazy" decoding="async" src={SITE_LOGO} alt={SITE_LOGO_ALT} width="168" height="48">
+            </a>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a href="index.html" class="cs-link">Accueil</a>
+                </li>
+                <li class="cs-li">
+                    <a href="apropos.html" class="cs-link">À Propos</a>
+                </li>
+                <li class="cs-li">
+                    <a href="coaching.html" class="cs-link">Coaching</a>
+                </li>
+                <li class="cs-li">
+                    <a href="blog.html" class="cs-link">Blog</a>
+                </li>
+                <li class="cs-li">
+                    <a href="contact.html" class="cs-link">Contact</a>
+                </li>
+                <li class="cs-li">
+                    <a href="mentions-legales.html" class="cs-link">Mentions Légales</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <!-- Social -->
+            <ul class="cs-social">
+                {SOCIAL_MEDIA.map((social, index) => (
+                    <li class="cs-social-li">
+                        <a href={social.url} class="cs-link" aria-label={social.name} target="_blank" rel="noopener">
+                            <span class={social.iconClass}></span>   
+                        </a>
+                    </li>
+                ))}
+            </ul>
+            <span class="cs-copyright">
+                {SITE_TITLE} © Copyright 2024 - Fait avec ❤️ par <a href={SITE_DEV_URL} class="cs-copyright-link">{SITE_DEV}</a>
+            </span>
+        </div>
+    </div>
+    <!-- Image de fond (commentée) -->
+    <!-- <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/professional1.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/professional1.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/professional1.jpg" alt="professionnel" width="1280" height="568">
+    </picture> -->
+</footer>
+
+<style>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #footer-1147 {
+        padding: var(--sectionPadding);
+        background-color: var(--headerColor);
+        position: relative;
+        z-index: 1;
+    }
+    #footer-1147 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer-1147 .cs-top {
+        width: 100%;
+        /* 32px - 40px */
+        margin-bottom: clamp(2rem, 4vw, 2.5rem);
+        padding-bottom: clamp(2rem, 4vw, 2.5rem);
+        border-bottom: 1px solid #484848;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    #footer-1147 .cs-ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 0.5rem;
+        /* 28px - 40px */
+        column-gap: clamp(1.75rem, 4vw, 2.5rem);
+    }
+    #footer-1147 .cs-li {
+        list-style: none;
+    }
+    #footer-1147 .cs-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+        transition: color 0.3s;
+    }
+    #footer-1147 .cs-link:hover {
+        color: var(--secondary);
+    }
+    #footer-1147 .cs-logo {
+        width: 10.5rem;
+        height: auto;
+        display: block;
+    }
+    #footer-1147 .cs-logo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #footer-1147 .cs-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    #footer-1147 .cs-social {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    #footer-1147 .cs-social-li {
+        list-style: none;
+    }
+    #footer-1147 .cs-social-link {
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+    #footer-1147 .cs-social-link:hover {
+        background-color: var(--secondary);
+    }
+    #footer-1147 .cs-social-link:hover .cs-social-icon {
+        filter: grayscale(1) brightness(0);
+        opacity: 1;
+    }
+    #footer-1147 .cs-social-icon {
+        width: 0.75rem;
+        height: auto;
+        display: block;
+        opacity: 0.5;
+    }
+    #footer-1147 .cs-copyright {
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0;
+        color: #bababa;
+        display: block;
+    }
+    #footer-1147 .cs-copyright-link {
+        font-size: inherit;
+        text-decoration: none;
+        color: var(--bodyTextColorWhite);
+        transition: color 0.3s;
+    }
+    #footer-1147 .cs-copyright-link:hover {
+        color: var(--secondary);
+    }
+    #footer-1147 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+   /* #footer-1147 .cs-background:before {
+         background color overlay 
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        opacity: 0.96;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #footer-1147 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+         Makes img tag act as a background image */
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #footer-1147 .cs-top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #footer-1147 .cs-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+</style>

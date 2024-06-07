@@ -1,0 +1,309 @@
+<section id="timeline-1517">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Timeline</span>
+                <h2 class="cs-title">Parcours de Succès</h2>
+                <p class="cs-text">
+                    Découvrez notre parcours et notre expertise dans le domaine du coaching en recrutement gagnant.
+                </p>
+            </div>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/cert1.png" alt="certification" width="199" height="140" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <picture class="cs-picture">
+                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/cert2.png" alt="certification" width="199" height="140" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <picture class="cs-picture">
+                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/cert2.png" alt="certification" width="199" height="140" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-date">Juillet 2018</span>
+                <h3 class="cs-h3">Certification en Recrutement</h3>
+                <p class="cs-item-text">
+                    École Supérieure du Recrutement
+                </p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-date">Août 2018</span>
+                <h3 class="cs-h3">Master en Gestion des Ressources Humaines</h3>
+                <p class="cs-item-text">
+                    Université des Talents
+                </p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-date">Septembre 2018</span>
+                <h3 class="cs-h3">Formation Avancée en Coaching</h3>
+                <p class="cs-item-text">
+                    Institut de Coaching Professionnel
+                </p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-date">Octobre 2018</span>
+                <h3 class="cs-h3">Atelier sur la Sélection de Talents</h3>
+                <p class="cs-item-text">
+                    Centre de Développement des Compétences
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #timeline-1517 {
+      /* 60px - 140px */
+      padding: clamp(3.75rem, 7.82vw, 8.75rem) 1rem;
+      /* clips the white line through the bullets */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    #timeline-1517:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      opacity: .05;
+      /* prevents the mouse from interacting with it */
+      pointer-events: none;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+    }
+    #timeline-1517 .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: 34.375rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #timeline-1517 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      /* 20px - 40px */
+      gap: clamp(1.25rem, 4vw, 2.5rem);
+    }
+    #timeline-1517 .cs-flex {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+    #timeline-1517 .cs-topper {
+      color: var(--secondary);
+    }
+    #timeline-1517 .cs-title {
+      max-width: 20ch;
+    }
+    #timeline-1517 .cs-image-group {
+      width: 100%;
+      max-width: 38.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    #timeline-1517 .cs-picture {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    #timeline-1517 .cs-picture img {
+      width: 100%;
+      height: auto;
+    }
+    #timeline-1517 .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* changes at tablet */
+      gap: 1.5rem;
+      position: relative;
+    }
+    #timeline-1517 .cs-card-group:before {
+      /* white line through the bullets */
+      content: "";
+      width: 2px;
+      background: #E8E8E8;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0;
+      /* send it way down to reach the bottom of the section, and have some overlap so if you add content and the ul gets longer, it will still be at the bottom */
+      bottom: -18.75rem;
+      /* half the width of the bullet */
+      left: 0.5625rem;
+    }
+    #timeline-1517 .cs-item {
+      width: 100%;
+      max-width: 25rem;
+      list-style: none;
+      padding: 0 0 0 2.75rem;
+      grid-column: span 12;
+      position: relative;
+    }
+    #timeline-1517 .cs-item:hover .cs-date {
+      color: var(--secondary);
+    }
+    #timeline-1517 .cs-item:hover:before {
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+    }
+    #timeline-1517 .cs-item:before {
+      /* bullet circle */
+      content: "";
+      width: 1.25rem;
+      height: 1.25rem;
+      background: #FFF8F5;
+      border: 2px solid #bababa;
+      /* prevents border from affecting height and width */
+      box-sizing: border-box;
+      border-radius: 50%;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    #timeline-1517 .cs-date {
+      font-size: 1rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      color: var(--bodyTextColor);
+      display: block;
+      transition: color .3s;
+    }
+    #timeline-1517 .cs-h3 {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+      line-height: 1.2em;
+      font-weight: 700;
+      /* changes to 100% at tablet */
+      width: 80%;
+      margin: 0;
+      color: var(--headerColor);
+      position: relative;
+    }
+    #timeline-1517 .cs-item-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      margin: 0.5rem 0 0 0;
+      color: var(--bodyTextColor);
+    }
+    #timeline-1517 .cs-floater {
+      width: 14.375rem;
+      height: auto;
+      display: none;
+      position: absolute;
+    }
+    #timeline-1517 .cs-floater1 {
+      bottom: 1.5625rem;
+      left: 0;
+    }
+    #timeline-1517 .cs-floater2 {
+      top: 1.25rem;
+      right: -4.5rem;
+    }
+    #timeline-1517 .cs-background {
+      --backgroundBG: #fff;
+      width: 100%;
+      min-width: 120rem;
+      height: auto;
+      position: absolute;
+      left: 0;
+    }
+    #timeline-1517 .cs-background-top {
+      top: 0;
+    }
+    #timeline-1517 .cs-background-bottom {
+      bottom: 0;
+      transform: rotateX(180deg);
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #timeline-1517 .cs-container {
+      max-width: 80rem;
+    }
+    #timeline-1517 .cs-card-group {
+      /* clips the lines */
+      overflow: hidden;
+      flex-direction: row;
+      /* 16px - 20px */
+      gap: clamp(1rem, 1.5vw, 1.25rem);
+      row-gap: 3rem;
+    }
+    #timeline-1517 .cs-card-group:before {
+      display: none;
+    }
+    #timeline-1517 .cs-item {
+      padding: 3.75rem 0 0 0;
+      grid-column: span 3;
+    }
+    #timeline-1517 .cs-item:after {
+      /* moved the line to the list item so we can have multiple rows */
+      content: "";
+      width: 110%;
+      height: 2px;
+      background: #E8E8E8;
+      /* prevents border from affecting height and width */
+      box-sizing: border-box;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0.5625rem;
+      left: 0;
+      z-index: -1;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    #timeline-1517 .cs-h3 {
+      width: 100%;
+    }
+  }
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #timeline-1517 .cs-content {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    #timeline-1517 .cs-flex {
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+  /* Larger Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #timeline-1517 .cs-floater {
+      display: block;
+    }
+  }
+</style>

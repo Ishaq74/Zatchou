@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface BlogListProps {
+  page: {
+    data: CollectionEntry<'blog'>[];
+    currentPage: number;
+    lastPage: number;
+  };
+}
+
+const { page }: BlogListProps = Astro.props;
+---
+  <h1>Blog</h1>
+  <div>
+    {page.data.map((post) => (
+      <article key={post.id}>
+        <h2><a href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
+        <p>{post.data.excerpt}</p>
+      </article>
+    ))}
+  </div>
+  <nav>
+    {page.currentPage > 1 && (
+      <a href={`/blog/${page.currentPage - 1}`}>Previous</a>
+    )}
+    {page.currentPage < page.lastPage && (
+      <a href={`/blog/${page.currentPage + 1}`}>Next</a>
+    )}
+  </nav>

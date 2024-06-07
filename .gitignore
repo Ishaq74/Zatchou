@@ -1,0 +1,30 @@
+# Fichiers temporaires
+*~
+
+# Fichiers de sauvegarde
+*.bak
+
+# Fichiers de logs
+*.log
+
+# Fichiers de données volumineux (par exemple, images, vidéos, données brutes)
+/data/*
+
+# Fichiers de configuration spécifiques à l'environnement local
+.env
+
+# Dossiers générés par des outils spécifiques au langage de programmation
+/node_modules/
+/vendor/
+
+# Fichiers de compilation ou de construction
+/build/
+/dist/
+/out/
+
+# Fichiers utilisateur
+.idea/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
